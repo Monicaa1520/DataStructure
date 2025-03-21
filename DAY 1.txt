@@ -1,0 +1,58 @@
+REVERSE AN ARRAY
+
+package datastructure;
+
+public class reverse {
+
+	    public static void main(String[] args) {
+	        int[] arr = {1, 2, 3, 4, 5};
+	        
+	        // Print the reversed array directly
+	        System.out.println("Reversed array:");
+	        for (int i = arr.length - 1; i >= 0; i--) {
+	            System.out.print(arr[i] + " ");
+	        }
+	    }
+	}
+
+
+MIN AND MAX
+
+package datastructure;
+
+public class MinMax {
+	    public static void main(String[] args) {
+	        int[] arr = {3, 5, 7, 2, 8, 1, 4};
+
+	        // Initialize min and max to the first element
+	        int min = arr[0];
+	        int max = arr[0];
+	        for (int i = 1; i < arr.length; i++) {
+	            if (arr[i] < min) min = arr[i];
+	            if (arr[i] > max) max = arr[i];
+	        }
+	        System.out.println("Min: " + min);
+	        System.out.println("Max: " + max);
+	    }
+	}
+
+ARRAY ROTATION
+package javaproject;
+
+public class arrayrotation {
+	    public static void rotateLeft(int[] arr, int n) {
+	        n = n % arr.length;
+	        int[] temp = new int[arr.length];
+	        for (int i = 0; i < arr.length; i++) temp[i] = arr[(i + n) % arr.length];
+	        System.arraycopy(temp, 0, arr, 0, arr.length);
+	    }
+
+	    public static void main(String[] args) {
+	        int[] arr = {1, 2, 3, 4, 5};
+	        rotateLeft(arr, 2);
+	        for (int num : arr) System.out.print(num + " ");
+	    }
+	}
+
+
+

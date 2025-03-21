@@ -1,0 +1,73 @@
+SINGLY LINKED LIST
+package DataStructure;
+public class Singly_linkedlist {
+	public static void main(String args[]) {
+		Linked_ex l=new Linked_ex();
+		l.insertAtBegin(60);
+		l.insertAtBegin(50);
+		l.insertAtBegin(40);
+		l.insertAtBegin(30);
+		l.insertAtBegin(20);
+		l.insertAtBegin(10);
+		l.insertAtAnyPos(4, 45);
+		l.insertAtAnyPos(5, 33);
+		l.insertAtBegin(777);
+		l.insertAtAnyPos(4, 333);
+		l.display();
+		l.deleteAtBegin();
+		l.deleteAtAnyPos(2);
+		
+		l.display();
+	}
+}	
+	
+MIDDLE ELEMENT IN LL
+package DataStructure;
+
+public class LinkedList {
+    static class Node {
+        int data;
+        Node next;
+        Node(int data) { this.data = data; }
+    }
+    Node head;
+    void append(int data) {
+        if (head == null) head = new Node(data);
+        else {
+            Node temp = head;
+            while (temp.next != null) temp = temp.next;
+            temp.next = new Node(data);
+        }
+    }
+    int findMiddle() {
+        Node slow = head, fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow != null ? slow.data : -1; 
+    }
+    public static void main(String[] args) {
+        LinkedList ll = new LinkedList();
+        ll.append(1);
+        ll.append(2);
+        ll.append(3);
+        ll.append(4);
+        ll.append(5);
+        System.out.println("Middle element: " + ll.findMiddle());
+    }
+}
+
+INSERT ELEMENTS
+package addon;
+import java.util.*;
+public class InsertElements {
+	    public static void main(String[] args) {
+	        List<Integer> list = new ArrayList<>(Arrays.asList(10, 20, 30, 40, 50, 60));
+	        list.add(0, 777);
+	        list.add(4, 333);
+	        System.out.println("Updated List: " + list);
+	    }
+	}
+
+
